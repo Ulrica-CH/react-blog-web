@@ -25,7 +25,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky install",
+    "lint": "eslint -c .eslintrc.js src --ext .ts,.tsx,.js,.jsx --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -54,8 +56,15 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
     "sass": "^1.62.0",
     "typescript-plugin-css-modules": "^5.0.1"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "eslint -c .eslintrc.js --fix"
+    ]
   }
 }
