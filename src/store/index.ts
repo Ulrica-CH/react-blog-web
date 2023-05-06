@@ -18,5 +18,4 @@ export interface TypedUseSelectorHook<TState> {
 }
 */
 export const useXySelector: TypedUseSelectorHook<IRootState> = useSelector;
-
 export default store;

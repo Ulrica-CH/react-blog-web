@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./", // 新增：配置 vscode  使用 @提示
     "paths": {
-      "@/*": ["src/*"] // 新增：配置 vscode  使用 @提示
+      "@/*": ["src/*"], // 新增：配置 vscode  使用 @提示
+      "components/*": ["src/components/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -25,7 +26,5 @@
       }
     ]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
